@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index",
+    "pages/logs/logs",
+    "pages/pressure_clac/index",
+    "pages/gas_clac/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

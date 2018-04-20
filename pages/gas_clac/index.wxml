@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view style='display:flex; justify-content: center; padding: 0px;'>
+  <image style="width: 80%; height: 56px; background-color: #eeeeee;" src="/img/logo_2.jpg" mode="widthFix" class='img_logo'></image>
+</view>
+
+<text style="font-size: 22px;  margin-left: 20px;">气量差额计算</text>
+<view class="container" style='display:block; padding: 7rpx 13px; border-top: 3px solid #a2a9b1;'>
+  <view class="weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>现有空压机额定排气量</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: m³</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input weui-cell__ft" id="b4" bindblur="bindblur_b4" value="{{b4}}" type="digit" placeholder="请输入额定排气量"/>
+      </view>
+    </view>
+
+
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>实际供气极限压力</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: Mpa(1Mpa = 10公斤(巴))</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input weui-cell__ft" id="b5" bindblur="bindblur_b5" value="{{b5}}" type="digit" placeholder="请输入实际供气极限压力" />
+      </view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>目标供气压力</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: Mpa(1Mpa = 10公斤(巴))</view>
+      </view>
+      <view class="weui-cell__bd">
+         <input class="weui-input weui-cell__ft" id="b7" bindblur="bindblur_b7" value="{{b7}}" type="digit" placeholder="请输入目标供气压力" />
+      </view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>压缩后实际体积</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: m³</view>
+      </view>
+      <view class="weui-cell__bd weui-cell__ft">
+         <text class="clac_value">{{b6}}</text>
+      </view>
+    </view>
+
+
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>增加设备需增加气量</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: m³/min</view>
+      </view>
+      <view class="weui-cell__bd weui-cell__ft">
+         <text class="clac_value">{{b8}}</text>
+      </view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>更换整机 总气量</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: m³/min</view>
+      </view>
+      <view class="weui-cell__bd weui-cell__ft">
+         <text class="clac_value">{{b9}}</text>
+      </view>
+    </view>
+  
+
+  </view>
+</view>

@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<view style='display:flex; justify-content: center; padding: 0px;'>
+  <image style="width: 80%; height: 56px; background-color: #eeeeee;" src="/img/logo_2.jpg" mode="widthFix" class='img_logo'></image>
+</view>
+
+<text style="font-size: 22px;  margin-left: 20px;">管道压降计算</text>
+<view class="container" style='height:100%; display:block;  padding: 7rpx 13px; border-top: 3px solid #a2a9b1;'>
+
+  <view class="weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>管道长度</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: 米</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input weui-cell__ft" id="length" bindblur="bindblur_l" value="{{length}}" type="digit" placeholder="请输入管道长度" />
+      </view>
+    </view>
+
+
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>管道内径</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: 毫米</view>
+      </view>
+      <view class="weui-cell__bd">
+       <input class="weui-input  weui-cell__ft" id="diameter" bindblur="bindblur_d" value="{{diameter}}" type="digit" placeholder="请输入管道内径" />
+      </view>
+    </view>
+
+
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>压缩机排量</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: m³/分</view>
+      </view>
+      <view class="weui-cell__bd">
+       <input class="weui-input  weui-cell__ft" id="sv" bindblur="bindblur_sv" value="{{sv}}" type="digit" placeholder="请输入压缩机排量" />
+      </view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>排气压力</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: 公斤(巴)</view>
+      </view>
+      <view class="weui-cell__bd">
+       <input class="weui-input  weui-cell__ft" id="bar" bindblur="bindblur_p" value="{{bar}}" type="digit" placeholder="请输入排气压力" />
+      </view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>压 降</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: 公斤(巴)</view>
+      </view>
+      <view class="weui-cell__bd  weui-cell__ft">
+       <text id="dp" class="clac_value  weui-cell__ft">{{dp}}</text>
+      </view>
+    </view>
+
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;"></view>
+      <view class="weui-cell__bd">
+        <view>管道流速</view>
+        <view style="margin:3px 0px 0px 0px; font-size: 13px;color: #888888;">单位: 米/秒</view>
+      </view>
+      <view class="weui-cell__bd  weui-cell__ft">
+       <text id="qc" class="clac_value  weui-cell__ft">{{qc}}</text>
+      </view>
+    </view>
+
+  </view>
+
+
+  <!-- <view class="section">
+    <view class="section-title">压缩机排量: </view>
+    <input id="sv"  bindblur="bindblur_sv" value="{{sv}}" type="digit"/>
+    <view class="flex-view-item">m³/分</view>
+  </view> -->
+  <view class="section">
+    <text id="r" style="color: {{color}}">{{r}}</text>
+  </view>
+
+</view>
